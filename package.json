@@ -1,7 +1,7 @@
 {
   "name": "codepad",
   "description": "A simple interface to codepad.org",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Sean Coates <sean@seancoates.com>",
   "contributors": [
     { "name": "Sean Coates", "email": "sean@seancoates.com" }

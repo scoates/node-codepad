@@ -67,10 +67,15 @@ var codepadEval = function(lang, code, callback, fetchOutput, customProject) {
 					}
 					// should definitely not be doing this with a regex
 					var re = new RegExp('<pre><a style="" name="output-line-1">1</a>[^]*?<pre>([^]*?)</pre>');
-
+					var out = re.exec(data);
+					if (out) {
+						out = out[1].substr(1); // trim leading \n
+					} else {
+						out = '';
+					}
 					callback(null, {
 						url: resultUrl,
-						output: re.exec(data)[1].substr(1) // trim leading \n
+						output: out
 					});
 				});
 			});
